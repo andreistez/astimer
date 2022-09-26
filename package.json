@@ -1,0 +1,23 @@
+{
+  "name": "@critick/astimer",
+  "version": "1.0.0",
+  "description": "Countdown timer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreistez/astimer.git"
+  },
+  "keywords": [
+    "timer",
+    "countdown"
+  ],
+  "author": "Andrei Stezenko (https://github.com/andreistez)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreistez/astimer/issues"
+  },
+  "homepage": "https://github.com/andreistez/astimer#readme"
+}

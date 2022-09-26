@@ -7,7 +7,7 @@ class ASTimer {
 			return
 		}
 
-		if (!this.setTimerElements()) return
+		this.setTimerElements()
 
 		if (!this.setDeadline()) return
 
@@ -15,17 +15,24 @@ class ASTimer {
 	}
 
 	setTimerElements() {
-		this.days		= this.timer.querySelector('.days')
-		this.hours		= this.timer.querySelector('.hours')
-		this.minutes	= this.timer.querySelector('.minutes')
-		this.seconds	= this.timer.querySelector('.seconds')
+		this.days = document.createElement('div')
+		this.days.classList.add('days')
 
-		if (!this.days || !this.hours || !this.minutes || !this.seconds) {
-			console.error('Please add require elements inside your timer with these class names: days, hours, minutes, seconds.')
-			return false
-		}
+		this.hours = document.createElement('div')
+		this.hours.classList.add('hours')
 
-		return true
+		this.minutes = document.createElement('div')
+		this.minutes.classList.add('minutes')
+
+		this.seconds = document.createElement('div')
+		this.seconds.classList.add('seconds')
+
+		this.setDefaultValues()
+
+		this.timer.appendChild(this.days)
+		this.timer.appendChild(this.hours)
+		this.timer.appendChild(this.minutes)
+		this.timer.appendChild(this.seconds)
 	}
 
 	setDeadline() {
@@ -87,6 +94,10 @@ class ASTimer {
 		this.days.classList.remove('fade')
 	}
 
+	setDefaultValues() {
+		this.days.innerHTML = this.hours.innerHTML = this.minutes.innerHTML = this.seconds.innerHTML = '00'
+	}
+
 	setTimer() {
 		let timerInterval
 
@@ -105,7 +116,7 @@ class ASTimer {
 
 			if (timerData.total <= 0) {
 				clearInterval(timerInterval)
-				this.days.innerHTML = this.hours.innerHTML = this.minutes.innerHTML = this.seconds.innerHTML = '00'
+				this.setDefaultValues()
 				this.clearFade()
 			}
 		}
