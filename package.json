@@ -1,6 +1,6 @@
 {
   "name": "@critick/astimer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Countdown timer",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "timer",
-    "countdown"
+    "countdown",
+    "es6"
   ],
   "author": "Andrei Stezenko (https://github.com/andreistez)",
   "license": "ISC",
