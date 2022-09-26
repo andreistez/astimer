@@ -1,6 +1,6 @@
 {
   "name": "@critick/astimer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Countdown timer",
   "main": "index.js",
   "scripts": {
