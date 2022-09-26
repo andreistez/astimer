@@ -1,5 +1,4 @@
 # ASTimer :alarm_clock:
-____
 
 ## What is this?
 ES6 countdown timer to show how many days, hours, minutes and seconds left to your deadline date.
